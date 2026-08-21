@@ -1,11 +1,3 @@
-Haan. Tumhare code aur given requirements ko dekhkar GitHub README ke liye ye description achha rahega. Isme features, technologies, sections aur project setup cover ho jayenge.
-
-30-word short description
-
-Modern responsive personal portfolio website built with HTML, CSS, and JavaScript, featuring interactive navigation, animated sections, project showcase, skills, resume download, social links, and validated contact form.
-
-GitHub README.md
-
 🌐 Personal Portfolio Website
 
 A modern, responsive personal portfolio website developed using HTML, CSS, and JavaScript to showcase my professional profile, technical skills, projects, education, certifications, and contact information.
