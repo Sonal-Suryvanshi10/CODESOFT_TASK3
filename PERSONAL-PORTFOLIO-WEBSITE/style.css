@@ -365,7 +365,7 @@ body {
     border-color: transparent;
 }
 
-/* ===== HOME IMAGE - NEW DESIGN ===== */
+/* ===== HOME IMAGE ===== */
 .home__image {
     display: flex;
     justify-content: center;
@@ -379,7 +379,6 @@ body {
     position: relative;
 }
 
-/* Profile Image */
 .home__img-wrapper img {
     width: 100%;
     height: 100%;
@@ -396,7 +395,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Glowing Background */
 .home__img-glow {
     position: absolute;
     width: 120%;
@@ -415,7 +413,6 @@ body {
     50% { opacity: 1; transform: scale(1.1); }
 }
 
-/* Decorative Border */
 .home__img-border {
     position: absolute;
     width: 100%;
@@ -435,7 +432,6 @@ body {
     border-width: 4px;
 }
 
-/* Decorative Rings */
 .ring {
     position: absolute;
     border-radius: 50%;
@@ -475,7 +471,6 @@ body {
     50% { transform: rotate(180deg) scale(1.05); }
 }
 
-/* Status Badge */
 .home__img-status {
     position: absolute;
     bottom: 15px;
@@ -506,7 +501,6 @@ body {
     50% { opacity: 0.5; transform: scale(0.8); }
 }
 
-/* Floating Icons */
 .home__floating {
     position: absolute;
     background: rgba(255, 255, 255, 0.05);
@@ -543,7 +537,6 @@ body {
     50% { transform: translateY(-20px) rotate(10deg); }
 }
 
-/* Scroll Down */
 .home__scroll {
     position: absolute;
     bottom: 2rem;
@@ -577,13 +570,6 @@ body {
 }
 
 /* ===== ABOUT ===== */
-
-.stat-number[data-count="3"]::after {
-    content: '+';
-}
-.stat-number[data-count="4"]::after {
-    content: '+';
-}
 .about {
     background: linear-gradient(180deg, #0f0e1a 0%, #1a1a2e 100%);
 }
@@ -657,6 +643,22 @@ body {
     display: block;
     font-size: 3rem;
     font-weight: 800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ✅ Plus sign for specific stats */
+.stat-number[data-count="3"]::after {
+    content: '+';
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.stat-number[data-count="4"]::after {
+    content: '+';
     background: linear-gradient(135deg, #667eea, #764ba2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1180,7 +1182,10 @@ body {
     }
 }
 
-/* ===== RESPONSIVE ===== */
+/* ============================================================ */
+/* ===== RESPONSIVE - FULLY FIXED ===== */
+/* ============================================================ */
+
 @media screen and (max-width: 968px) {
     .home__container {
         grid-template-columns: 1fr;
@@ -1228,7 +1233,9 @@ body {
     }
 }
 
+/* ✅ TABLET & MOBILE FIX - "Hello, I'm" CHHIPEGA NAHI */
 @media screen and (max-width: 768px) {
+    /* Navigation */
     .nav__menu {
         position: fixed;
         top: 0;
@@ -1268,8 +1275,26 @@ body {
         font-size: 1.8rem;
     }
 
+    /* ✅ HOME - FIXED: "Hello, I'm" ab chhipega nahi */
+    .home {
+        padding-top: 6rem !important;
+        min-height: 100vh;
+    }
+
+    .home__container {
+        gap: 2rem !important;
+    }
+
+    .home__content {
+        padding-top: 0.5rem !important;
+    }
+
     .home__name {
         font-size: 3rem;
+    }
+
+    .home__greeting {
+        font-size: 1rem;
     }
 
     .home__img-wrapper {
@@ -1318,9 +1343,35 @@ body {
     }
 }
 
+/* ✅ SMALL MOBILE FIX */
 @media screen and (max-width: 480px) {
+    .home {
+        padding-top: 5rem !important;
+    }
+
+    .home__container {
+        gap: 1.5rem !important;
+    }
+
+    .home__content {
+        padding-top: 0 !important;
+    }
+
     .home__name {
         font-size: 2.5rem;
+    }
+
+    .home__greeting {
+        font-size: 0.9rem;
+    }
+
+    .home__profession {
+        font-size: 1rem;
+    }
+
+    .home__description {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
     }
 
     .home__buttons {
@@ -1365,5 +1416,15 @@ body {
 
     .stat-number {
         font-size: 2rem;
+    }
+
+    .home__social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .home__floating {
+        display: none !important;
     }
 }
